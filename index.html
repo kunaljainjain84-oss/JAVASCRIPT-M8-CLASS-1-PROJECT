@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #Colors{
+            color: lightseagreen;
+        }
+        #info{
+            color: hotpink;
+        }
+        #t{
+            color:khaki ;
+        }
+    </style>
+</head>
+<body>
+    <h2>Creating Static Method </h2>
+    <p id="t">Today we will implement this method on the topic <b><i>Colors.</i></b></p>
+    <p id="Colors"></p>
+    <p id="info"></p>
+    <p id="shade"></p>
+    <script>
+        class Colors{
+            constructor(name){
+                this.colorName=name;
+            }
+            static color(){
+                return "Colors are vibrant and attractive.They help us increase our creativity and make us imaginative."+"<br>";
+            }
+            static info(x){
+                return "Colors are of two types:Primary & Secondary.The primary colors are "+x.colorName;
+            }
+        }
+        myname=new Colors("Red,Yellow,Blue");
+        document.getElementById("Colors").innerHTML=Colors.color();
+        document.getElementById("info").innerHTML=Colors.info(myname);
+          </script>                  
+</body>
+</html>
